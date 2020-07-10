@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="32beffec-08dd-4412-a5ed-4c2cb60020b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/session16/lab1/AddEditMonHoc.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/session16/lab1/Connection.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/session16/lab1/MonHoc.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/session16/lab1/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/session16/lab2/Connection.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/session16/lab2/Controllers/MonHocController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/session16/lab2/Models/MonHocModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/session16/lab2/Views/AddEditMonHoc.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/session16/lab2/Views/MonHoc.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/session16/lab2/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/session16/lab3/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/session16/note.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/session16/quy tac Passcal.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php47_project/Backend/Models/CategoryModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/php47_project/Backend/Models/CategoryModel.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,6 +16,13 @@
       <executable />
     </execution>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -37,11 +32,13 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/session16/lab2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\PHPCODECLASS\php47_project\Backend\Controllers" />
       <recent name="C:\xampp\htdocs\PHPCODECLASS\session16\lab2" />
     </key>
   </component>
@@ -69,6 +66,12 @@
       <updated>1592706394540</updated>
       <workItem from="1592706395700" duration="9000" />
       <workItem from="1593689534056" duration="10090000" />
+      <workItem from="1593862237237" duration="1791000" />
+      <workItem from="1593864343740" duration="7859000" />
+      <workItem from="1593938561689" duration="652000" />
+      <workItem from="1594293768721" duration="10619000" />
+      <workItem from="1594465664218" duration="376000" />
+      <workItem from="1594466062502" duration="241000" />
     </task>
     <servers />
   </component>
