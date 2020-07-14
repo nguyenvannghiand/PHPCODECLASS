@@ -6,7 +6,7 @@
 		public function read()
 		{
 			//quy dinh so ban ghi tren mot trang
-			$recordPerPape = 4;
+			$recordPerPape = 20;
 			//tinh so trang
 			$numPage = ceil($this->totalRecord() / $recordPerPape);
 			//goi ham modelRead tu class UserModel de lay ket qua

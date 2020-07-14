@@ -17,6 +17,8 @@
     <!-- Google Font -->
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <!--    load file ckeditor.js vao day-->
+    <script type="text/javascript" src="ckeditor/ckeditor.js"></script>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
@@ -42,7 +44,7 @@
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <img src="Assets/images/user2-160x160.jpg" class="user-image" alt="User Image">
-                            <span class="hidden-xs"><?php echo $_SESSION["email"];?></span>
+                            <span class="hidden-xs"><?php echo $_SESSION["email"]; ?></span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- User image -->
@@ -79,7 +81,7 @@
                     <img src="Assets/images/user2-160x160.jpg" class="img-circle" alt="User Image">
                 </div>
                 <div class="pull-left info">
-                    <p><?php echo $_SESSION["email"];?></p>
+                    <p><?php echo $_SESSION["email"]; ?></p>
                     <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                 </div>
             </div>
@@ -105,11 +107,11 @@
            				</span>
                     </a>
                 </li>
-				<li>
-					<a href="index.php?controller=login&action=logout">
-						<i class="fa fa-th"></i> <span>Đăng xuất</span>
-					</a>
-				</li
+                <li>
+                    <a href="index.php?controller=login&action=logout">
+                        <i class="fa fa-th"></i> <span>Đăng xuất</span>
+                    </a>
+                </li
             </ul>
         </section>
         <!-- /.sidebar -->

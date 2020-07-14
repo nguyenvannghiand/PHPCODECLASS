@@ -18,7 +18,7 @@
 			//lay bien ket noi
 			$conn = Connection::getInstance();
 			//thuc hien truy van
-			$query = $conn->query("select * from categories order by id desc limit $from ,$recordPerPage");
+			$query = $conn->query("select * from categories where parent_id =0 order by id desc limit $from ,$recordPerPage");
 			//lay tat cac ket qua tra ve
 			$result = $query->fetchAll();
 			return $result;
@@ -30,7 +30,7 @@
 			//lay bien ket noi
 			$conn = Connection::getInstance();
 			//thuc hien truy van
-			$query = $conn->query("select id from categories");
+			$query = $conn->query("select id from categories where parent_id = 0");
 			return $query->rowCount();
 		}
 		
@@ -53,13 +53,15 @@
 		{
 			//--
 			$name = $_POST["name"];
+			$parent_id = $_POST["parent_id"];
 			//--
 			//lay bien ket noi
 			$conn = Connection::getInstance();
 			//thuc hien truy van
-			$query = $conn->prepare("update categories set name =:name where id=:id");
-			$query->execute(array("id" => $id, "name" => $name));
+			$query = $conn->prepare("update categories set name =:name, parent_id =:parent_id where id=:id");
+			$query->execute(array("id" => $id, "name" => $name,"parent_id"=>$parent_id));
 		}
+		
 		//create ban ghi
 		public function modelCreate()
 		{
@@ -72,6 +74,7 @@
 			$query = $conn->prepare("insert into categories set name=:name");
 			$query->execute(array("name" => $name));
 		}
+		
 		//delete ban ghi
 		public function modelDelete($id)
 		{
@@ -83,6 +86,29 @@
 			$query->execute(array("id" => $id));
 		}
 		
+		// lay cac danh muc cap con (tu view se goi ham nay)
+		public function modelReatSub($category_id)
+		{
+			//lay bien ket noi
+			$conn = Connection::getInstance();
+			// thuc hien truy van
+			$query = $conn->query("select * from categories where parent_id=$category_id");
+			// lay tat ca cac ban ghie
+			$result = $query->fetchAll();
+			return $result;
+		}
+		
+		//doc tat ca cac ban ghi
+		public function modelReadDropDownCategory()
+		{
+			//lay bien ket noi
+			$conn = Connection::getInstance();
+			//thuc hien truy van
+			$query = $conn->query("select * from categories where parent_id =0 order by id desc");
+			//lay tat cac ket qua tra ve
+			$result = $query->fetchAll();
+			return $result;
+		}
 	}
 
 ?>
