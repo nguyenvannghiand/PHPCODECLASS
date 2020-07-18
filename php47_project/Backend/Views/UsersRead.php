@@ -11,32 +11,26 @@
                     <th>Email</th>
                     <th style="width:100px;"></th>
                 </tr>
-				<?php foreach ($listRecord as $rows):?>
+                <?php foreach($listRecord as $rows): ?>
                 <tr>
-                    <td><?php echo $rows->name;?></td>
-                    <td><?php echo $rows->email;?></td>
+                    <td><?php echo $rows->name; ?></td>
+                    <td><?php echo $rows->email; ?></td>
                     <td style="text-align:center;">
-                        <a href="index.php?controller=users&action=update&id=<?php echo $rows->id;?>">Edit</a>&nbsp;
-                        <a href="index.php?controller=users&action=delete&id=<?php echo $rows->id;?>" onclick="return window.confirm('Are you sure?');">Delete</a>
+                        <a href="index.php?controller=users&action=update&id=<?php echo $rows->id; ?>">Edit</a>&nbsp;
+                        <a href="index.php?controller=users&action=delete&id=<?php echo $rows->id; ?>" onclick="return window.confirm('Are you sure?');">Delete</a>
                     </td>
                 </tr>
-				<?php endforeach;?>
+                <?php endforeach; ?>
             </table>
             <style type="text/css">
-                .pagination {
-                    padding: 0px;
-                    margin: 0px;
-                }
+                .pagination{padding:0px; margin:0px;}
             </style>
-			<ul class="pagination">
-				<li class="pape-item"><a href="#" class="pape-link">Trang</a>
-				
-				</li>
-				<?php for ($i =1;$i <=$numPage; $i++):?>
-				<li class="pape-item"><a href="index.php?controller=users&action=read&p=<?php echo $i;?>" class="pape-link"><?php echo $i;?></a></li>
-				<?php endfor;?>
-				
-			</ul>
+            <ul class="pagination">
+                <li class="page-item"><a href="#" class="page-link">Trang</a></li>
+                <?php for($i = 1; $i <= $numPage; $i++): ?>
+                <li class="page-item"><a href="index.php?controller=users&action=read&p=<?php echo $i; ?>" class="page-link"><?php echo $i; ?></a></li>
+                <?php endfor; ?>
+            </ul>
         </div>
     </div>
 </div>

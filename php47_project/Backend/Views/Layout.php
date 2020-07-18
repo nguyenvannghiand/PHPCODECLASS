@@ -12,12 +12,12 @@
     <link rel="stylesheet" href="Assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="Assets/css/AdminLTE.min.css">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
-		 folder instead of downloading all of them to reduce the load. -->
+         folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="Assets/css/_all-skins.min.css">
     <!-- Google Font -->
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-    <!--    load file ckeditor.js vao day-->
+    <!-- load file ckeditor.js vao day -->
     <script type="text/javascript" src="ckeditor/ckeditor.js"></script>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
@@ -91,12 +91,17 @@
 
                 <li>
                     <a href="index.php?controller=categories&action=read">
-                        <i class="fa fa-th"></i> <span>Danh mục sản phẩm</span>
+                        <i class="fa fa-th"></i> <span>Danh mục sản phẩm</span>
                     </a>
                 </li>
                 <li>
                     <a href="index.php?controller=products&action=read">
-                        <i class="fa fa-th"></i> <span>Danh sách sản phẩm</span>
+                        <i class="fa fa-th"></i> <span>Danh sách sản phẩm</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.php?controller=parameters&action=read">
+                        <i class="fa fa-th"></i> <span>Thuộc tính sản phẩm</span>
                     </a>
                 </li>
                 <li>
@@ -104,14 +109,14 @@
                         <i class="fa fa-code"></i> <span>Quản lý user</span>
                         <span class="pull-right-container">
               <!--<small class="label pull-right bg-green">new</small>-->
-           				</span>
+            </span>
                     </a>
                 </li>
                 <li>
                     <a href="index.php?controller=login&action=logout">
-                        <i class="fa fa-th"></i> <span>Đăng xuất</span>
+                        <i class="fa fa-th"></i> <span>Đăng xuất</span>
                     </a>
-                </li
+                </li>
             </ul>
         </section>
         <!-- /.sidebar -->
@@ -133,25 +138,23 @@
 
         <!-- Main content -->
         <section class="content">
-			<?php
-				
-				if (file_exists($fileController)) {
-					include $fileController;
-					//VD: inclue"Controllers/UsersController.php"
-					//tao object cua class $controller
-					if (class_exists($className)) {
-						$obj = new $className();
-						//Dac tinh cua ngon ngu Php cho phep tao new bien -> khoi tao ();
-						//$obj = new Users();
-						
-						//goi ham ben trong class
-						$obj->$action();
-						//$obj->Read();
-					}
-				}
-			
-			?>
-
+            <?php                 
+                //kiem tra xem file do co ton tai khong, neu co ton tai thi load vao day            
+                if(file_exists($fileController))
+                {
+                    include $fileController;      
+                    //VD: include "Controllers/UsersController.php";          
+                    //tao object cua class $controller
+                    if(class_exists($className))
+                    {
+                        $obj = new $className(); 
+                        //$obj = new Users(); 
+                        //goi ham ben trong class
+                        $obj->$action();
+                        //$obj->Read();
+                    }
+                }
+             ?>
         </section>
         <!-- /.content -->
     </div>
@@ -164,7 +167,7 @@
         reserved.
     </footer>
     <!-- Add the sidebar's background. This div must be placed
-		 immediately after the control sidebar -->
+         immediately after the control sidebar -->
     <div class="control-sidebar-bg"></div>
 </div>
 <!-- ./wrapper -->

@@ -1,7 +1,6 @@
-<?php
+<?php 
 	class LoginModel{
-		public function checkLogin()
-		{
+		public function checkLogin(){
 			$email = $_POST["email"];
 			//ham md5 de Hash chuoi
 			$password = md5($_POST["password"]);
@@ -10,18 +9,16 @@
 			//chuan bi truy van
 			$query = $conn->prepare("select * from users where email=:email");
 			//thuc thi truy van
-			//co the su dung [] de khai bao array. [] <=> array()
-			$query->execute(["email" => $email]);
+			//co the su dung dau [] de khai bao array. [] <=> array()
+			$query->execute(["email"=>$email]);
 			//lay mot ban ghi
 			$result = $query->fetch();
-			if (isset($result->email)) {
-				if ($result->password == $password) {
+			if(isset($result->email)){
+				if($result->password == $password){
 					//dang nhap thanh cong
 					$_SESSION["email"] = $email;
 				}
 			}
-			
 		}
 	}
-?>
-
+ ?>
