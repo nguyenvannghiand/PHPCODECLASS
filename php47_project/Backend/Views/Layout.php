@@ -7,13 +7,13 @@
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
-    <link rel="stylesheet" href="Assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../Assets/Backend/css/bootstrap.min.css">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="Assets/css/font-awesome.min.css">
-    <link rel="stylesheet" href="Assets/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="../Assets/Backend/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../Assets/Backend/css/AdminLTE.min.css">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
-    <link rel="stylesheet" href="Assets/css/_all-skins.min.css">
+    <link rel="stylesheet" href="../Assets/Backend/css/_all-skins.min.css">
     <!-- Google Font -->
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
@@ -43,13 +43,13 @@
                     <!-- User Account: style can be found in dropdown.less -->
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <img src="Assets/images/user2-160x160.jpg" class="user-image" alt="User Image">
+                            <img src="../Assets/Backend/images/user2-160x160.jpg" class="user-image" alt="User Image">
                             <span class="hidden-xs"><?php echo $_SESSION["email"]; ?></span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- User image -->
                             <li class="user-header">
-                                <img src="Assets/images/user2-160x160.jpg" class="img-circle" alt="User Image">
+                                <img src="../Assets/Backend/images/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                                 <p>
                                     Your profile
@@ -78,7 +78,7 @@
             <!-- Sidebar user panel -->
             <div class="user-panel">
                 <div class="pull-left image">
-                    <img src="Assets/images/user2-160x160.jpg" class="img-circle" alt="User Image">
+                    <img src="../Assets/Backend/images/user2-160x160.jpg" class="img-circle" alt="User Image">
                 </div>
                 <div class="pull-left info">
                     <p><?php echo $_SESSION["email"]; ?></p>
@@ -173,12 +173,12 @@
 <!-- ./wrapper -->
 
 <!-- jQuery 3 -->
-<script src="Assets/js/jquery.min.js"></script>
+<script src="../Assets/Backend/js/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
-<script src="Assets/js/jquery-ui.min.js"></script>
+<script src="../Assets/Backend/js/jquery-ui.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
-<script src="Assets/js/bootstrap.min.js"></script>
+<script src="../Assets/Backend/js/bootstrap.min.js"></script>
 <!-- AdminLTE App -->
-<script src="Assets/js/adminlte.min.js"></script>
+<script src="../Assets/Backend/js/adminlte.min.js"></script>
 </body>
 </html>
