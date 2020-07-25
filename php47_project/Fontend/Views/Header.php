@@ -8,7 +8,7 @@
                     <span><i class="fa fa-envelope-o"></i> <a href="mailto:support@mail.com">support@mail.com</a></span>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-6 customer">
-                    <a href="/Account/Login">Đăng nhập</a>&nbsp; &nbsp;<a href="/Account/Register">Đăng ký</a>
+                    <a href="index.php?controller=account&action=login">Đăng nhập</a>&nbsp; &nbsp;<a href="index.php?controller=account&action=logout">Đăng ký</a>
                 </div>
             </div>
         </div>
@@ -25,7 +25,7 @@
                     <script type="text/javascript">
                         function search() {
                             key = document.getElementById("key").value;
-                            location.href = "/Product/Search?key=" + key;
+                            location.href = "index.php?controller=products&action=search?key=" + key;
                             return false;
                         }
 
@@ -34,7 +34,7 @@
                             if (event.keyCode == 13) {
                                 key = document.getElementById("key").value;
                                 //alert(key);
-                                location.href = "/Product/Search?key=" + key;
+                                location.href = "index.php?controller=products&action=search?key=" + key;
                             }
                             return false;
                         }
@@ -127,7 +127,7 @@
             <div class="container">
                 <div class="clearfix">
                     <ul class="main-nav hidden-xs hidden-sm list-unstyled">
-                        <li class="active"><a href="/">Trang chủ</a></li>
+                        <li class="active"><a href="index.php">Trang chủ</a></li>
                         <li class="has-submenu">
                             <a href="/collections/all">
                                 <span>Sản phẩm</span><i class="fa fa-caret-down" style="margin-left: 5px;"></i>
